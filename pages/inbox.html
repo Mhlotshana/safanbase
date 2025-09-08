@@ -1,0 +1,57 @@
+<!doctype html><html lang='en'><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inbox · SafanBase</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+<meta name="description" content="SafanBase connects South African fans & brands with athletes and celebrities for personalised content, endorsements & appearances.">
+<meta property="og:title" content="Inbox · SafanBase"><meta property="og:image" content="../assets/og.png">
+<link rel="icon" href="../assets/favicon.ico">
+<link rel="stylesheet" href="../styles.css">
+<script defer src="../app.js"></script></head><body>
+<div class="demo-bar">
+  <div class="container inner">
+    <div class="badge">Demo · localStorage · No backend</div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <button class="btn btn-ghost" onclick="SB.demoLogin('fan')">Login as Fan</button>
+      <button class="btn btn-ghost" onclick="SB.demoLogin('talent')">Login as Talent</button>
+      <button class="btn btn-ghost" onclick="SB.demoLogin('admin')">Login as Admin</button>
+      <button class="btn btn-outline" onclick="SB.logout()">Logout</button>
+      <button class="btn" onclick="SB.resetDemo()">Reset Demo</button>
+    </div>
+  </div>
+</div>
+<header class="header">
+  <div class="container nav">
+    <div class="brand"><img src="../assets/logo.svg" alt="logo"><span>SafanBase</span></div>
+    <ul>
+      <li><a class="" href="../index.html">Home</a></li>
+      <li><a class="" href="../pages/explore.html">Explore</a></li>
+      <li><a class="" href="../pages/services.html">Services</a></li>
+      <li><a class="" href="../pages/dashboard.html">Dashboard</a></li>
+      <li><a class="active" href="../pages/inbox.html">Inbox</a></li>
+      <li><a class="" href="../pages/brands.html">Brands</a></li>
+      <li><a class="" href="../pages/admin.html">Admin</a></li>
+      <li><a class="" href="../pages/login.html">Login</a></li>
+      <li><a class="btn " href="../pages/register.html">Register</a></li>
+      <li><a href="../pages/inbox.html" title="Notifications">🔔<span id="notifDot">0</span></a></li>
+    </ul>
+  </div>
+</header><section class='section'><div class='container'>
+  <h2>Inbox</h2>
+  <div class="grid grid-2">
+    <div class="card"><div class="body"><strong>Conversations</strong><div id="threads"></div></div></div>
+    <div class="card"><div class="body"><strong id="chatWith">Select a conversation</strong><div id="messages" style="margin:10px 0;max-height:360px;overflow:auto;border:1px solid var(--border);border-radius:12px;padding:10px"></div>
+      <form id="msgForm" class="hidden" onsubmit="SB.sendMessage(event)">
+        <div class="form-row"><input class="input" name="content" placeholder="Type a message…"><button class="btn" type="submit">Send</button></div>
+      </form>
+    </div></div>
+  </div>
+</div></section><footer class="footer">
+  <div class="container inner">
+    <div>© 2025 SafanBase. All rights reserved.</div>
+    <div style="display:flex;gap:14px;flex-wrap:wrap">
+      <a href="../pages/about.html">About</a>
+      <a href="../pages/contact.html">Contact</a>
+      <a href="../pages/terms.html">Terms</a>
+      <a href="../pages/policy.html">Privacy</a>
+    </div>
+  </div>
+</footer></body></html>
