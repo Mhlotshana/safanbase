@@ -1,0 +1,98 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home · SafanBase</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+<meta name="description" content="SafanBase connects South African fans & brands with athletes and celebrities for personalised content, endorsements & appearances.">
+<meta property="og:title" content="Home · SafanBase"><meta property="og:image" content="assets/og.png">
+<link rel="icon" href="assets/favicon.ico">
+<link rel="stylesheet" href="styles.css">
+<script defer src="app.js"></script></head><body>
+
+<div class="demo-bar">
+  <div class="container inner">
+    <div class="badge">Demo · localStorage · No backend</div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <button class="btn btn-ghost" onclick="SB.demoLogin('fan')">Login as Fan</button>
+      <button class="btn btn-ghost" onclick="SB.demoLogin('talent')">Login as Talent</button>
+      <button class="btn btn-ghost" onclick="SB.demoLogin('admin')">Login as Admin</button>
+      <button class="btn btn-outline" onclick="SB.logout()">Logout</button>
+      <button class="btn" onclick="SB.resetDemo()">Reset Demo</button>
+    </div>
+  </div>
+</div>
+<header class="header">
+  <div class="container nav">
+    <div class="brand"><img src="assets/logo.svg" alt="logo"><span>SafanBase</span></div>
+    <ul>
+      <li><a class="active" href="index.html">Home</a></li>
+      <li><a class="" href="pages/explore.html">Explore</a></li>
+      <li><a class="" href="pages/services.html">Services</a></li>
+      <li><a class="" href="pages/dashboard.html">Dashboard</a></li>
+      <li><a class="" href="pages/inbox.html">Inbox</a></li>
+      <li><a class="" href="pages/brands.html">Brands</a></li>
+      <li><a class="" href="pages/admin.html">Admin</a></li>
+      <li><a class="" href="pages/login.html">Login</a></li>
+      <li><a class="btn " href="pages/register.html">Register</a></li>
+      <li><a href="pages/inbox.html" title="Notifications">🔔<span id="notifDot">0</span></a></li>
+    </ul>
+  </div>
+</header>
+<section class="hero">
+  <div class="container wrap">
+    <div>
+      <div class="badge">South Africa · Athletes & Celebrities</div>
+      <h1>Book personalised shoutouts, endorsements & appearances.</h1>
+      <p>SafanBase connects fans and brands with South African athletes and celebrities across sports, music, film and influencer culture.</p>
+      <div class="hero-cta">
+        <a class="btn" href="pages/explore.html">Explore Talent</a>
+        <a class="btn btn-outline" href="pages/register.html">Become a Talent</a>
+      </div>
+      <div style="margin-top:14px;display:flex;gap:10px">
+        <input id="homeSearch" class="input" placeholder="Search name · industry · sport">
+        <button class="btn" onclick="SB.searchFromHome()">Search</button>
+      </div>
+      <p class="muted" style="margin-top:8px">Tip: try <span class="kbd">Kolisi</span> or <span class="kbd">Music</span></p>
+    </div>
+    <div class="card"><img src="assets/hero.jpg" alt="SafanBase talent" style="height:460px;object-fit:cover;width:100%"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Browse by Category</h2>
+    <p class="lead">No public prices—each talent sets their own rate. Choose a category to find the right person.</p>
+    <div class="grid grid-4">
+      <div class="service-pill"><strong>Birthday Shoutouts</strong><p class="muted">Personal video messages</p><button class="btn" onclick="location.href='pages/explore.html?category=SHOUTOUT'">Find Talent</button></div>
+      <div class="service-pill"><strong>Endorsements</strong><p class="muted">Authentic brand promos</p><button class="btn" onclick="location.href='pages/explore.html?category=ENDORSEMENT'">Find Talent</button></div>
+      <div class="service-pill"><strong>Appearances</strong><p class="muted">Live & virtual events</p><button class="btn" onclick="location.href='pages/explore.html?category=APPEARANCE'">Find Talent</button></div>
+      <div class="service-pill"><strong>Custom Videos</strong><p class="muted">Congrats, pep talks, more</p><button class="btn" onclick="location.href='pages/explore.html?category=CUSTOM'">Find Talent</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Featured Talents</h2>
+    <p class="lead">Six handpicked South African stars. Click to view their services.</p>
+    <div id="featuredGrid" class="grid grid-3"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container grid grid-3">
+    <div class="card"><div class="body"><div class="chip">Step 1</div><h3>Request</h3><p class="muted">Pick a category and talent. Share the details of what you need.</p></div></div>
+    <div class="card"><div class="body"><div class="chip">Step 2</div><h3>Pay Securely</h3><p class="muted">In production you’ll pay via SA-friendly options (Instant EFT, QR, cash vouchers).</p></div></div>
+    <div class="card"><div class="body"><div class="chip">Step 3</div><h3>Receive</h3><p class="muted">Get your video, appearance, or endorsement. Chat in Inbox for tweaks.</p></div></div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="container inner">
+    <div>© 2025 SafanBase. All rights reserved.</div>
+    <div style="display:flex;gap:14px;flex-wrap:wrap">
+      <a href="pages/about.html">About</a>
+      <a href="pages/contact.html">Contact</a>
+      <a href="pages/terms.html">Terms</a>
+      <a href="pages/policy.html">Privacy</a>
+    </div>
+  </div>
+</footer>
+</body></html>
